@@ -12,6 +12,3 @@ Add-WindowsPackage -Online -PackagePath $wintemp\$lpfile
 
 Set-WinSystemLocale -SystemLocale ja-JP
 Set-TimeZone -Id "Tokyo Standard Time"
-
-Restart-Computer -Force
-
