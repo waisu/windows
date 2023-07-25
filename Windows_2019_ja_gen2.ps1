@@ -1,5 +1,7 @@
 
 #windows japanese localization
+$wintemp = "C:\Windows\Temp"
+
 $lpurl = "http://kikawadiag.blob.core.windows.net/vhds"
 $lpfile ="LpTemp2019.cab"
 New-ItemProperty -Path HKLM:Software\Microsoft\Windows\CurrentVersion\policies\system -Name EnableLUA -PropertyType DWord -Value 0 -Force
