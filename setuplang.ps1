@@ -10,6 +10,8 @@ $xml = @"
 "@
 $xml | Out-File -FilePath $unattendxml
 
+Set-WinSystemLocale -SystemLocale ja-JP
+Set-TimeZone -Id "Tokyo Standard Time"
 
 Set-WinHomeLocation -GeoId 122
 Set-WinUserLanguageList -LanguageList ja-JP -Force
