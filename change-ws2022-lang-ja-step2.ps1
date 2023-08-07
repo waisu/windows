@@ -95,5 +95,4 @@ $params = @{
 }
 Set-LanguageOptions @params -Verbose
 
-# Restart the system to take effect changes.
-Restart-Computer
+
