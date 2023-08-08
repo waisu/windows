@@ -95,4 +95,5 @@ $params = @{
 }
 Set-LanguageOptions @params -Verbose
 
+Set-ItemProperty "registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters" -Name "LayerDriver JPN" -Value "kbd106.dll"
 
