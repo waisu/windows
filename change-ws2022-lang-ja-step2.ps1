@@ -78,6 +78,8 @@ function Set-LanguageOptions
     Remove-Item -LiteralPath $xmlFileFilePath -Force
 }
 
+Set-ItemProperty "registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters" -Name "LayerDriver JPN" -Value "kbd106.dll"
+
 # Set the current user's language options and copy it to the default user account and system account. Also, set the system locale.
 #
 # References:
@@ -94,6 +96,3 @@ $params = @{
     SystemLocale                     = 'ja-JP'
 }
 Set-LanguageOptions @params -Verbose
-
-Set-ItemProperty "registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters" -Name "LayerDriver JPN" -Value "kbd106.dll"
-
