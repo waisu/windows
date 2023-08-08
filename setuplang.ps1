@@ -19,4 +19,6 @@ Set-WinUILanguageOverride -Language ja-JP
 Set-WinCultureFromLanguageListOptOut -OptOut 0
 Set-WinDefaultInputMethodOverride -InputTip "0411:00000411"
 Set-ItemProperty "registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters" -Name "LayerDriver JPN" -Value "kbd106.dll"
+Set-ItemProperty "registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layouts\00000411" -Name "Layout File" -Value "kbd106.dll"
+
 control.exe "intl.cpl,,/f:```"$unattendxml```""
